@@ -1,0 +1,44 @@
+/*
+* ho ten sv: Nguyễn Văn A
+* ma sv: 12345678
+* ngay tao: 02/11/2026
+*/
+
+using System;
+
+class Cau3
+{
+    static void Main(string[] args)
+    {
+        // Dòng bắt buộc in đầu tiên khi chạy chương trình
+        Console.WriteLine("Nguyen Van A - 12345678 - De so 1");
+        Console.WriteLine("----------------------------------");
+
+        // Khai báo mảng 1 chiều kiểu double gồm 5 phần tử
+        double[] giaMonHang = new double[5];
+        double tongGiaTri = 0;
+
+        // Nhập giá cho 5 món đồ
+        for (int i = 0; i < 5; i++)
+        {
+            Console.Write($"Nhap gia mon {i + 1}: ");
+            giaMonHang[i] = double.Parse(Console.ReadLine());
+            tongGiaTri += giaMonHang[i]; // Cộng dồn tổng giá trị
+        }
+
+        // In danh sách giá 5 món trên 1 dòng
+        Console.Write("Danh sach gia 5 mon: ");
+        for (int i = 0; i < 5; i++)
+        {
+            Console.Write(giaMonHang[i]);
+            if (i < 4)
+            {
+                Console.Write(", ");
+            }
+        }
+        Console.WriteLine();
+
+        // In tổng giá trị giỏ hàng
+        Console.WriteLine($"Tong gia tri gio hang: {tongGiaTri:N0} VND");
+    }
+}
