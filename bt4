@@ -1,0 +1,40 @@
+/*
+* ho ten sv: Nguyễn Văn A
+* ma sv: 12345678
+* ngay tao: 02/11/2026
+*/
+
+using System;
+
+class Cau4
+{
+    // Định nghĩa hàm tính tiền hoàn Cashback
+    static double TinhTienHoan(double tongTien)
+    {
+        if (tongTien >= 200000)
+        {
+            return tongTien * 0.05; // Hoàn 5%
+        }
+        else
+        {
+            return 0; // Hoàn 0 VND
+        }
+    }
+
+    static void Main(string[] args)
+    {
+        // Dòng bắt buộc in đầu tiên khi chạy chương trình
+        Console.WriteLine("Nguyen Van A - 12345678 - De so 1");
+        Console.WriteLine("----------------------------------");
+
+        // Nhập tiền đơn hàng
+        Console.Write("Nhap so tien don hang: ");
+        double tongTien = double.Parse(Console.ReadLine());
+
+        // Gọi hàm và nhận giá trị trả về
+        double tienHoan = TinhTienHoan(tongTien);
+
+        // In kết quả
+        Console.WriteLine($"So tien duoc hoan ve vi: {tienHoan:N0} VND");
+    }
+}
