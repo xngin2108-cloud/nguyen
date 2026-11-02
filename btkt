@@ -1,0 +1,40 @@
+/*
+* ho ten sv: Nguyễn Văn A
+* ma sv: 12345678
+* ngay tao: 02/11/2026
+*/
+
+using System;
+
+class Cau1
+{
+    static void Main(string[] args)
+    {
+        // Dòng bắt buộc in đầu tiên khi chạy chương trình
+        Console.WriteLine("Nguyen Van A - 12345678 - De so 1");
+        Console.WriteLine("----------------------------------");
+
+        // Nhập dữ liệu
+        Console.Write("Nhap so luong op lung: ");
+        int soLuongOp = int.Parse(Console.ReadLine());
+
+        Console.Write("Nhap don gia op lung: ");
+        double donGiaOp = double.Parse(Console.ReadLine());
+
+        Console.Write("Nhap so luong kinh cuong luc: ");
+        int soLuongKinh = int.Parse(Console.ReadLine());
+
+        Console.Write("Nhap don gia kinh cuong luc: ");
+        double donGiaKinh = double.Parse(Console.ReadLine());
+
+        // Tính toán
+        double tienHang = (soLuongOp * donGiaOp) + (soLuongKinh * donGiaKinh);
+        double phiBocXop = 8000;
+        double tongThanhToan = tienHang + phiBocXop;
+
+        // In kết quả
+        Console.WriteLine($"Tien hang: {tienHang:N0} VND");
+        Console.WriteLine($"Phi boc xop chong soc: {phiBocXop:N0} VND");
+        Console.WriteLine($"Tong thanh toan: {tongThanhToan:N0} VND");
+    }
+}
