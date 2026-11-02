@@ -1,0 +1,43 @@
+/*
+* ho ten sv: Nguyễn Văn A
+* ma sv: 12345678
+* ngay tao: 02/11/2026
+*/
+
+using System;
+
+class Cau2
+{
+    static void Main(string[] args)
+    {
+        // Dòng bắt buộc in đầu tiên khi chạy chương trình
+        Console.WriteLine("Nguyen Van A - 12345678 - De so 1");
+        Console.WriteLine("----------------------------------");
+
+        // Nhập tổng tiền đơn hàng
+        Console.Write("Nhap tong tien don hang: ");
+        double tongTienDonHang = double.Parse(Console.ReadLine());
+
+        double phiVanChuyen = 0;
+
+        // Xử lý cấu trúc rẽ nhánh
+        if (tongTienDonHang < 150000)
+        {
+            phiVanChuyen = 25000;
+        }
+        else if (tongTienDonHang < 400000) // Từ 150.000 đến dưới 400.000
+        {
+            phiVanChuyen = 15000;
+        }
+        else // Từ 400.000 trở lên
+        {
+            phiVanChuyen = 0;
+        }
+
+        double tongTienPhaiTra = tongTienDonHang + phiVanChuyen;
+
+        // In kết quả
+        Console.WriteLine($"Phi van chuyen: {phiVanChuyen:N0} VND");
+        Console.WriteLine($"Tong tien phai tra: {tongTienPhaiTra:N0} VND");
+    }
+}
